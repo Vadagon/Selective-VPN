@@ -1,21 +1,28 @@
 {
-  "name": "Cinoz",
-  "version": "1",
-  "homepage_url": "http://vadagon.com",
-  "description": "Cinoz — безопасный VPN-сервис высочайшего качества.",
+  "name": "Selective VPN",
+  "version": "0.5",
+  "author": "Vadagon",
+  "description": "Use VPN connection on specific websites",
   "browser_action": {
-    "default_icon": "img/icon16.png",
+    "default_icon": "img/spears.png",
     "default_popup": "popup.html"
   },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "web_accessible_resources": [
+    "img/*",
+    "assets/*"
+  ],
   "icons": {
-    "16": "img/icon16.png",
-    "32": "img/icon32.png",
-    "48": "img/icon48.png",
-    "128": "img/icon128.png"
+    "256": "img/spears.png"
   },
   "permissions": [
     "proxy",
-    "http://*/", "https://*/"
+    "tabs",
+    "webRequest",
+    "storage",
+    "http://*/", "https://*/", "<all_urls>"
   ],
   "manifest_version": 2
 }
